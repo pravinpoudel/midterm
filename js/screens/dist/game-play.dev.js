@@ -80,8 +80,9 @@ function () {
         if (!GameState.cancelNextRequest) {
           requestAnimationFrame(gameLoop);
         } else {
-          context.font = '48px serif';
-          context.fillText('Hello world', 10, 50); // self.manager.showScreen("mainmenu");
+          context.font = "70px roboto";
+          context.textAlign = "center";
+          context.fillText("Game Over", canvas.width / 2, canvas.height * 0.8); // self.manager.showScreen("mainmenu");
         }
       }
 

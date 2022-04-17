@@ -3,6 +3,7 @@ let context;
 let manager = new Manager();
 window.addEventListener("resize", resizeCanvas, false);
 
+let isSpacePressed = false;
 GameState.menu = manager;
 
 let screens = {

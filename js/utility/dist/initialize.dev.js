@@ -4,6 +4,7 @@ var canvas = document.getElementById("canvas-main");
 var context;
 var manager = new Manager();
 window.addEventListener("resize", resizeCanvas, false);
+var isSpacePressed = false;
 GameState.menu = manager;
 var screens = {
   highscores: new HighScoreMenu(manager),

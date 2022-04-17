@@ -42,16 +42,15 @@ class GamePlay {
   checkHandler(elapsedTime){
     if(this.meter.checkMarker(this.marker)){
       this.marker= new Marker();
-    }
+  }
   }
 
   run() {
     let self = this;
-
     let lastTimeStamp = performance.now();
     GameState.cancelNextRequest = false;
 
-    this.myKeyboard.register(" ", this.checkHandler )
+    this.myKeyboard.register(" ", this.checkHandler);
     function gameLoop(time) {
       self.processInput(time - lastTimeStamp);
       self.update(time - lastTimeStamp);
@@ -59,10 +58,10 @@ class GamePlay {
       self.render();
       if (!GameState.cancelNextRequest) {
         requestAnimationFrame(gameLoop);
-      }
-      else{
-        context.font = '48px serif';
-        context.fillText('Hello world', 10, 50)
+      } else {
+        context.font = "70px roboto";
+        context.textAlign = "center";
+        context.fillText("Game Over", canvas.width / 2, canvas.height * 0.8);
         // self.manager.showScreen("mainmenu");
       }
     }

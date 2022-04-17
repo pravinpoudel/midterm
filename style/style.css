@@ -106,13 +106,14 @@ ul.menu li button:active {
 
 #score_board{
     position: absolute;
-    left: 20px;
+    width: 100%;
+    text-align: center;
     top: 20px;
     font-weight: 800;
 }
 
 #score_board p{
-    font-size: 0.3em !important;
+    /* font-size: 0.3em !important; */
 }
 
 
